@@ -30,3 +30,18 @@ h1 {
     width: 2%;
     height: 2%;
 }
+
+.main-title {
+    color: yellow;
+    margin-top: 25vh;
+}
+
+.button-view {
+    text-align: center;
+    background-color: transparent;
+    margin-top: 20vh;
+}
+
+.btn_btn-primary_btn-lg {
+    color: brown;
+}
