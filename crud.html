@@ -55,54 +55,79 @@
                     </h2>
                 </div>
             </div>
+            <br>
             <div class="row">
                 <div class="col-md-4" style="text-align: center;">
-                    <h1>1</h1>
+
                 </div>
                 <div class="col-md-4">
-                    <form>
+                    <form id="formulario">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="exampleInputName1" class="form-label">Ingrese sus Nombres y Apellidos</label>
+                            <input placeholder="Willy Valentin" type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
                         </div>
+                        <!-- <div class="mb-3">
+                            <label for="disabledSelect" class="form-label">Doctores: </label>
+                            <select id="disabledSelect" class="form-select">
+                              <option>Disabled select</option>
+                            </select>
+                        </div> -->
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="exampleInputName1" class="form-label">Ingresar los Nombres y Apellidos del Doctor</label>
+                            <input placeholder="José Palacios" type="text" class="form-control" id="doctor" aria-describedby="emailHelp">
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Ingrese Fecha de la Cita</label>
+                            <input placeholder="15/06/2003" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" type="text" class="form-control" id="fecha">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="container-fluid h-100">
+                            <div class="row w-100 align-items-center">
+                                <div class="col text-center">
+                                    <button class="btn btn-danger regular-button" type="button" onclick="AgregarCita()"> Agregar </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-primary" style="">Submit</button> -->
                     </form>
                 </div>
                 <div class="col-md-4" style="text-align: center;">
-                    <h1>3</h1>
+
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-3">
 
-
-
-
-
-
-
-
-
-
-            <div class="d-flex flex-column">
-                <div class="p-2">
-                    <div class="position-relative">
-                        <div class="position-absolute top-0 start-0"></div>
-                        <div class="position-absolute top-0 start-50 translate-middle-x">
-
-                        </div>
-                        <div class="position-absolute top-0 end-0"></div>
-                    </div>
                 </div>
-                <div class="p-2">Flex item 2</div>
-                <div class="p-2">Flex item 3</div>
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre Paciente</th>
+                                <th scope="col">Nombre Doctor</th>
+                                <th scope="col">Fecha</th>
+                                <th style="text-align: center;" scope="col">Editar</th>
+                                <th style="text-align: center;" scope="col">Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody class="lista" id="lista">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td style="text-align: center;"><i class="fa-solid fa-pen-to-square"></i></td>
+                                <td style="text-align: center;"><i class="fa-solid fa-trash"></i></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3">
+
+                </div>
             </div>
 
         </body>
@@ -119,7 +144,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
+    <script src="./index.js"></script>
+    <script src="https://kit.fontawesome.com/f614b66842.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
