@@ -20,29 +20,16 @@ function RenderListar() {
     const list = document.getElementById('lista');
     list.innerHTML = '';
     arr.forEach(function(element, index) {
-        let tr = document.createElement('tr');
-        let td1 = document.createElement('td');
-        let td2 = document.createElement('td');
-        let td3 = document.createElement('td');
-        let td4 = document.createElement('td');
-        let td5 = document.createElement('td');
-        let th = document.createElement('th');
-        let th_text0 = document.createTextNode(index + 1);
-        let td_text1 = document.createTextNode(element.nombre);
-        let td_text2 = document.createTextNode(element.doctor);
-        let td_text3 = document.createTextNode(element.fecha);
-        th.appendChild(th_text0);
-        th.setAttribute('scope', 'row');
-        td1.appendChild(td_text1);
-        td2.appendChild(td_text2);
-        td3.appendChild(td_text3);
-
-        tr.appendChild(th);
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-
-        list.append(tr);
+        list.innerHTML += `
+        <tr>
+            <th scope="row">${index}</th>
+            <td>${element.nombre}</td>
+            <td>${element.doctor}</td>
+            <td>${element.fecha}</td>
+            <td style="text-align: center;"><a onclick="" href="#" style="color: black;"><i class="fa-solid fa-pen-to-square"></i></a></td>
+            <td style="text-align: center;"><a onclick="eliminarCita(${index})" href="#" style="color: black;"><i class="fa-solid fa-trash"></i></a></td>
+        </tr>
+        `;
     })
     document.getElementById('formulario').reset();
 
@@ -57,5 +44,10 @@ function AgregarCita() {
     var fecha = document.getElementById('fecha').value;
 
     arr.push(new Cita(nombre, doctor, fecha));
+    RenderListar();
+}
+
+function eliminarCita(i) {
+    arr.splice(i, 1);
     RenderListar();
 }
