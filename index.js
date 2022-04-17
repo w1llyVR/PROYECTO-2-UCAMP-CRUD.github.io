@@ -78,7 +78,7 @@ function CambiarValores(i) {
 
 function getElements() {
     let localSt = localStorage.getItem('lista-citas');
-    arr = localSt.split(',');
+    //arr = localSt.split(',');
     for (let i = 0; i < arr.length; i++) {
         console.log(arr[i].nombre + " " + arr[i].doctor + " " +
             arr[i].fecha);
