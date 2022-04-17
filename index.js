@@ -57,7 +57,7 @@ function AgregarCita() {
         document.getElementById('button-crud').value = 'Agregar';
 
     }
-    localStorage.setItem('lista-citas', arr)
+    //localStorage.setItem('lista-citas', arr)
     RenderListar();
 }
 
