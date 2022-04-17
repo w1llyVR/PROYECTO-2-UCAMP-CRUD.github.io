@@ -55,6 +55,7 @@ function AgregarCita() {
         arr[indice]._fecha = Fecha;
         editable = false;
         document.getElementById('button-crud').value = 'Agregar';
+
     }
     localStorage.setItem('lista-citas', arr)
     RenderListar();
